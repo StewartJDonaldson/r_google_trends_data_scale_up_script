@@ -63,5 +63,3 @@ Attaching package: ‘data.table’
     transpose
 
 "
-"0","# library(fable)"
-"0","# library(tsibble)"

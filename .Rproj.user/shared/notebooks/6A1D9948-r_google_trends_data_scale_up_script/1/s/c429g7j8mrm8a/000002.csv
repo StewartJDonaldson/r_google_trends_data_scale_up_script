@@ -1,6 +1,5 @@
 "0","# Related query data cleaning"
 "0",""
-"0",""
 "0","# Cleaning top related search data"
 "0","top_related_query_data_cleaned <- related_query_data %>%"
 "0","  "
