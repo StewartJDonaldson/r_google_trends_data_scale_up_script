@@ -1,0 +1,6 @@
+"0","```r
+
+# Joining user data and account data sets together to form one combined dataset
+user_accounts_full_join <- full_join(x = users, y = user_accounts, by = \"user_identifier\")
+ 
+```"

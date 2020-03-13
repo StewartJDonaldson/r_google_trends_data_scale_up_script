@@ -1,0 +1,6 @@
+"0","```r
+# Joining total_login variable to cleaned user account data
+total_logins_joined <- left_join(x = cleaned_user_account_data, y = total_logins, by = \"user_identifier\")
+
+total_logins_joined
+```"

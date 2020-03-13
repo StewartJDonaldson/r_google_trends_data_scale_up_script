@@ -1,0 +1,36 @@
+"0","```r
+summary(full_md_data)
+```"
+"1"," user_identifier     gender           age_range         salary_range      
+ Min.   :     3   Length:292075      Length:292075      Length:292075     
+ 1st Qu.:173178   Class :character   Class :character   Class :character  
+ Median :367889   Mode  :character   Mode  :character   Mode  :character  
+ Mean   :325381                                                           
+ 3rd Qu.:471996                                                           
+ Max.   :560565                                                           
+                                                                          
+ registration_date    account_type       financial_institution account_created_date
+ Min.   :2010-01-26   Length:292075      Length:292075         Min.   :2011-05-30  
+ 1st Qu.:2014-10-25   Class :character   Class :character      1st Qu.:2014-12-01  
+ Median :2017-01-14   Mode  :character   Mode  :character      Median :2017-04-23  
+ Mean   :2016-10-24                                            Mean   :2016-12-18  
+ 3rd Qu.:2018-11-15                                            3rd Qu.:2019-01-01  
+ Max.   :2020-01-06                                            Max.   :2020-01-06  
+                                                                                   
+ total_transactions  total_logins    first_login_date     last_login_date     
+ Min.   :    1.0    Min.   :  1.00   Min.   :2018-01-01   Min.   :2018-01-01  
+ 1st Qu.:   52.0    1st Qu.:  2.00   1st Qu.:2018-06-02   1st Qu.:2018-11-19  
+ Median :  261.0    Median :  4.00   Median :2019-01-19   Median :2019-07-08  
+ Mean   :  830.7    Mean   : 13.26   Mean   :2018-12-30   Mean   :2019-05-04  
+ 3rd Qu.: 1112.0    3rd Qu.: 10.00   3rd Qu.:2019-07-25   3rd Qu.:2019-11-11  
+ Max.   :28254.0    Max.   :713.00   Max.   :2020-01-05   Max.   :2020-01-05  
+                    NA's   :145292   NA's   :145292       NA's   :145292      
+ diff_login_date  no_of_accounts 
+ Min.   :  0.0    Min.   :1.000  
+ 1st Qu.:  1.0    1st Qu.:2.000  
+ Median : 36.0    Median :2.000  
+ Mean   :124.8    Mean   :2.209  
+ 3rd Qu.:183.0    3rd Qu.:3.000  
+ Max.   :734.0    Max.   :4.000  
+ NA's   :145292                  
+"

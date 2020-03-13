@@ -1,0 +1,7 @@
+"0","```r
+write_csv(full_user_data, \"~/Data-project-5/CodeClanMoneyDashboardDataResearchProject/4_clean_data/cleaned_md_user_account_login_data.csv\")
+
+write_csv(cleaned_user_account_data, \"~/Data-project-5/CodeClanMoneyDashboardDataResearchProject/4_clean_data/cleaned_user_account_data.csv\" )
+
+write_csv(users_with_no_accounts,\"~/Data-project-5/CodeClanMoneyDashboardDataResearchProject/4_clean_data/users_with_no_accounts.csv\" )
+```"

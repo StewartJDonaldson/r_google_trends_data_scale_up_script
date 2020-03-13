@@ -1,0 +1,9 @@
+"0","```r
+
+# Based on the summary statstics on total_accounts, the medium value of accounts per user is 4. Therefore, this is the threshold being used to determine which rows of data are genuine customers and to exclude tester accounts 
+
+four_accounts_per_user <- total_accounts_join %>%
+  filter(total_accounts <= 4)
+
+four_accounts_per_user
+```"

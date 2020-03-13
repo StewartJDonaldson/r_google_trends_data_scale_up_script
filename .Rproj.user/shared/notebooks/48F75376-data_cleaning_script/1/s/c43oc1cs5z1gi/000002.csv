@@ -1,0 +1,35 @@
+"0","```r
+
+# Getting a view on the total types of accounts per user to help understand duplicate accounts
+total_current_accounts <- four_accounts_per_user %>%
+  filter(account_type == \"current\") %>%
+  group_by(user_identifier) %>%
+  summarise(total_current_accounts = n())
+
+total_credit_cards <- four_accounts_per_user %>%
+  filter(account_type == \"credit card\") %>%
+  group_by(user_identifier) %>%
+  summarise(total_credit_cards = n())
+
+total_savings_accounts <- four_accounts_per_user %>%
+  filter(account_type == \"savings\") %>%
+  group_by(user_identifier) %>%
+  summarise(total_savings_accounts = n())
+
+total_other_accounts <- four_accounts_per_user %>%
+  filter(account_type == \"other\") %>%
+  group_by(user_identifier) %>%
+  summarise(total_other_accounts = n())
+
+# Joining total_current_accounts, total_credit_cards, total_savings_accounts, and total_other_accounts variables to cleaned data set
+
+total_current_accounts_join <- full_join(x = four_accounts_per_user, y = total_current_accounts, by = \"user_identifier\")
+
+total_credit_cards_join <- full_join(x = total_current_accounts_join, y = total_credit_cards, by = \"user_identifier\")
+
+total_savings_accounts_join <- full_join(x = total_credit_cards_join, y = total_savings_accounts, by = \"user_identifier\")
+
+total_other_accounts_join <- full_join(x = total_savings_accounts_join, y = total_other_accounts, by = \"user_identifier\")
+
+total_other_accounts_join
+```"

@@ -1,0 +1,19 @@
+"0","```r
+
+
+# Getting a view on the duration between first interactions with the app and last interaction to understand user engagement
+
+app_activity<- user_logins_cleaned %>%
+  group_by(user_identifier) %>%
+  summarise(
+    first_login_date = min(login_date),
+    last_login_date = max(login_date)) %>%
+  mutate(
+    
+    # Measuring how engaged users are with the app by calculating the number of days between their first interaction and last
+    diff_login_date = last_login_date - first_login_date
+
+    ) 
+
+app_activity
+```"

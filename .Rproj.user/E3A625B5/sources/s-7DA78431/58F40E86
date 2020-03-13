@@ -1,0 +1,33 @@
+{
+    "collab_server" : "",
+    "contents" : "",
+    "created" : 1584117939137.000,
+    "dirty" : false,
+    "encoding" : "",
+    "folds" : "",
+    "hash" : "0",
+    "id" : "58F40E86",
+    "lastKnownWriteTime" : 8747515907003121664,
+    "last_content_update" : 1584117939137,
+    "path" : null,
+    "project_path" : null,
+    "properties" : {
+        "cacheKey" : "56FE6847",
+        "caption" : "interest_over_time_data",
+        "contentUrl" : "grid_resource/gridviewer.html?env=&obj=interest_over_time_data&cache_key=56FE6847",
+        "displayedObservations" : 3654,
+        "environment" : "",
+        "expression" : "interest_over_time_data",
+        "object" : "interest_over_time_data",
+        "preview" : 0,
+        "totalObservations" : 3654,
+        "variables" : 7
+    },
+    "read_only" : false,
+    "read_only_alternatives" : [
+    ],
+    "relative_order" : 2,
+    "source_on_save" : false,
+    "source_window" : "",
+    "type" : "r_dataframe"
+}

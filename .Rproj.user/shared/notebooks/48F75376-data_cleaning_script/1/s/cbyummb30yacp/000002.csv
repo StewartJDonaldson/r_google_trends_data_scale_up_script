@@ -1,0 +1,19 @@
+"0","```r
+cleaned_user_account_data <- total_other_accounts_join %>%
+  
+  # Grouping variables together to de-dup account data. By doing this method this captures all duplicate accounts and banks and summarises them into a single entry by geting the first date (i.e. min(account_created_date)) they were added, the unique account and summing up all the account transactions
+  
+  group_by(user_identifier,
+           gender,
+           age_range,
+           salary_range, 
+           registration_date,
+           account_type,
+           financial_institution
+           ) %>%
+  summarise(
+    account_created_date = min(account_created_date),
+    total_transactions = sum(total_number_of_transactions))
+
+cleaned_user_account_data
+```"

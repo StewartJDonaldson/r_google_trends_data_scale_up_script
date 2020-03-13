@@ -1,0 +1,41 @@
+"0","```r
+
+summary(users)
+```"
+"1"," user_identifier     gender           age_range         salary_range       registration_date 
+ Min.   :     1   Length:559299      Length:559299      Length:559299      Length:559299     
+ 1st Qu.:140046   Class :character   Class :character   Class :character   Class :character  
+ Median :280006   Mode  :character   Mode  :character   Mode  :character   Mode  :character  
+ Mean   :280315                                                                              
+ 3rd Qu.:420746                                                                              
+ Max.   :560571                                                                              
+"
+"0","```r
+summary(user_accounts)
+```"
+"1"," user_identifier  account_identifier account_created_date account_type       financial_institution
+ Min.   :     1   Min.   :      1    Length:1225207       Length:1225207     Length:1225207       
+ 1st Qu.:110451   1st Qu.: 351172    Class :character     Class :character   Class :character     
+ Median :343275   Median : 741565    Mode  :character     Mode  :character   Mode  :character     
+ Mean   :296136   Mean   : 740229                                                                 
+ 3rd Qu.:449982   3rd Qu.:1114922                                                                 
+ Max.   :560571   Max.   :1545312                                                                 
+ total_number_of_transactions
+ Min.   :    1.0             
+ 1st Qu.:   16.0             
+ Median :   80.0             
+ Mean   :  465.6             
+ 3rd Qu.:  454.0             
+ Max.   :28254.0             
+"
+"0","```r
+summary(user_logins)
+```"
+"1","   record_id       user_identifier   login_date       
+ Min.   :2579817   Min.   :     1   Length:3755504    
+ 1st Qu.:3518693   1st Qu.:311126   Class :character  
+ Median :4457568   Median :410031   Mode  :character  
+ Mean   :4457568   Mean   :350641                     
+ 3rd Qu.:5396444   3rd Qu.:466724                     
+ Max.   :6335320   Max.   :560571                     
+"

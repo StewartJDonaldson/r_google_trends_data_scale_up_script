@@ -1,0 +1,26 @@
+{
+    "collab_server" : "",
+    "contents" : "",
+    "created" : 1584117211293.000,
+    "dirty" : true,
+    "encoding" : "UTF-8",
+    "folds" : "",
+    "hash" : "2638640699",
+    "id" : "E7BA37C1",
+    "lastKnownWriteTime" : 1584124820,
+    "last_content_update" : 1584124908384,
+    "path" : "~/7_personal_projects/r_google_trends_data_scale_up_script/2_scripts/r_google_trends_data_scale_up_script.Rmd",
+    "project_path" : "2_scripts/r_google_trends_data_scale_up_script.Rmd",
+    "properties" : {
+        "chunk_output_type" : "inline",
+        "cursorPosition" : "14,19",
+        "scrollLine" : "4"
+    },
+    "read_only" : false,
+    "read_only_alternatives" : [
+    ],
+    "relative_order" : 1,
+    "source_on_save" : false,
+    "source_window" : "",
+    "type" : "r_markdown"
+}

@@ -1,0 +1,53 @@
+"0","```r
+
+# Creating engagement categories to help analyse the data
+full_md_data <- full_md_data %>%
+  mutate(engagement_level = case_when(
+    total_logins == 0 ~ \"no engagement\",
+    is.na(total_logins) ~ \"no engagement\",
+    total_logins <= 2 ~ \"low engagement\",
+    total_logins >= 3 & total_logins <= 13 ~ \"mid engagement\",
+    total_logins > 13 ~ \"high engagement\"),
+    
+    # Finding the difference in days between when user first added their accounts to the last time they logged into the app to understand engagement and usage of the app
+    
+    diff_account_created_vs_last_login = last_login_date - account_created_date,
+    
+    # Imputing NA values in diff_account_created_and_last_login and total_login columns
+    diff_account_created_vs_last_login = ifelse(diff_account_created_vs_last_login <= 0, 0, diff_account_created_vs_last_login),
+    
+    diff_account_created_vs_last_login = ifelse(is.na(diff_account_created_vs_last_login), 0, diff_account_created_vs_last_login),
+    
+    total_logins = ifelse(is.na(total_logins), 0, total_logins),
+    
+    # Finding how long it takes a user from registering with the app to when they add an account
+    diff_reg_date_vs_account_created_date = account_created_date - registration_date,
+    
+    # Creating engagement duration category's to help better visualise data and analyse it
+    engagement_duration = case_when(
+        diff_account_created_vs_last_login == 0 | is.na(diff_account_created_vs_last_login) ~ \"no activity\",
+        diff_account_created_vs_last_login <= 7 ~ \"1 week\",
+        diff_account_created_vs_last_login >= 8 & diff_account_created_vs_last_login <= 30 ~ \"1 month\",
+        diff_account_created_vs_last_login >= 31 & diff_account_created_vs_last_login <= 90 ~ \"3 months\",
+        diff_account_created_vs_last_login >= 91 & diff_account_created_vs_last_login <= 180 ~ \"6 months\",
+        diff_account_created_vs_last_login >= 181 & diff_account_created_vs_last_login <=365 ~ \"12 months\",
+        diff_account_created_vs_last_login > 365 ~ \"+ 12 months\" 
+      ) ,
+    engagement_duration = factor(engagement_duration, levels = c(\"no activity\", \"1 week\", \"1 month\", \"3 months\", \"6 months\", \"12 months\", \"+ 12 months\")),
+    
+    # Adding an account creation month column to help visualises and analyse what month users added their accounts and what was the connection between when they added an account and how long they stayed engaging with the app
+    account_creation_month = month(account_created_date, label = TRUE, abbr = TRUE),
+    
+    account_activity = case_when(
+      total_transactions < 261 ~ \"little to no activity\",
+      total_transactions >= 261 & total_transactions <= 830 ~ \"relatively active\",
+      total_transactions >= 831 & total_transactions <= 1112 ~ \"highly active\",
+      total_transactions > 1112 ~ \"extremely active\"
+    ),
+    
+    account_activity = factor(account_activity, levels = c(\"little to no activity\", \"relatively active\", \"highly active\", \"extremely active\"))
+
+  )
+
+    
+```"

@@ -1,0 +1,14 @@
+"0","```r
+
+# Joining app_activity variable to cleaned user account data
+full_user_data <- left_join(x = total_logins_joined, y = app_activity, by = \"user_identifier\")
+
+
+# Adding new column to get view of total accounts per user based on the de-dupped data
+no_of_accounts <- full_user_data %>%
+  group_by(user_identifier) %>%
+  summarise(no_of_accounts = n())
+
+full_user_data <- left_join(x = full_user_data, y = no_of_accounts, by = \"user_identifier\")
+
+```"

@@ -1,0 +1,25 @@
+"0","```r
+
+# Finding out the total number accounts per user to determine a threshold for cleaning full data set
+total_accounts <- excluding_na_values %>%
+  group_by(user_identifier) %>%
+  summarise(\"total_accounts\" = n_distinct(account_identifier)) %>%
+  arrange(desc(total_accounts))
+
+
+# Finding out median value of total_accounts so I can determine what threshold to filter the full data set by and get an accurate representation of what users are actually customers and not testers
+
+summary(total_accounts)
+```"
+"1"," user_identifier  total_accounts   
+ Min.   :     1   Min.   :  1.000  
+ 1st Qu.:133114   1st Qu.:  2.000  
+ Median :348329   Median :  4.000  
+ Mean   :307005   Mean   :  4.847  
+ 3rd Qu.:459610   3rd Qu.:  6.000  
+ Max.   :560571   Max.   :259.000  
+"
+"0","```r
+# Joining total_accounts per user to main dataset (excluding users that don't have an account)
+total_accounts_join <- full_join(x = excluding_na_values, y = total_accounts, by = \"user_identifier\")
+```"

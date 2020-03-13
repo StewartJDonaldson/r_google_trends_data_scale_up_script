@@ -1,0 +1,4 @@
+"0","```r
+# Inspecting full data set
+head(user_accounts_full_join)
+```"

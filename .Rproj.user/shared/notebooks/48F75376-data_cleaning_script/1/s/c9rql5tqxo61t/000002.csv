@@ -1,0 +1,27 @@
+"0","```r
+
+
+excluding_na_values <- user_accounts_full_join %>%
+  
+  # Excluding users that don't have an accounts registered with the app as this subset of users is not necessary for what is being asked for in the brief
+  filter(!is.na(account_identifier)) %>% 
+  
+  mutate(
+    
+    # Imputing \"01/01/1900\" values to \"01/01/2012\" as the company wasnt founded until 2009 and the first date that data was collected was on \"01/01/2012\" 
+    account_created_date = ifelse(account_created_date == \"01/01/1900\", \"01/01/2012\", account_created_date),
+    
+    # Imputing values for NAs in salary_range
+    salary_range = ifelse(is.na(salary_range), \"unknown\", salary_range),
+    
+    # Converting date columns from strings to date format
+    registration_date = dmy(registration_date),
+    account_created_date = dmy(account_created_date),
+    
+    ) %>%
+  
+  # Converting all strings values to lower case
+  mutate_if(.predicate = is.character, .funs = str_to_lower)
+
+excluding_na_values
+```"

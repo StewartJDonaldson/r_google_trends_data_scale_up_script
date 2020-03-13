@@ -1,0 +1,19 @@
+"0","```r
+
+# Cleaning user login data
+
+user_logins_cleaned <- user_logins %>%
+  mutate(
+    login_date = dmy(login_date)
+  )
+  
+
+# Getting a view on login frequency by users in order to use it as a measure of engagement
+
+total_logins <- user_logins_cleaned %>%
+  group_by(user_identifier) %>%
+  summarise(\"total_logins\" = n_distinct(login_date)) %>%
+  arrange(desc(total_logins))
+
+total_logins
+```"

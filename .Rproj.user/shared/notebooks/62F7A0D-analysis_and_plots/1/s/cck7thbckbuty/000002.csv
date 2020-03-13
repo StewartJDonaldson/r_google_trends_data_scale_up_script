@@ -1,0 +1,37 @@
+"0","```r
+full_md_data <- read_csv(\"~/Data-project-5/CodeClanMoneyDashboardDataResearchProject/4_clean_data/cleaned_md_user_account_login_data.csv\")
+```"
+"1","Parsed with column specification:
+cols(
+  user_identifier = [32mcol_double()[39m,
+  gender = [31mcol_character()[39m,
+  age_range = [31mcol_character()[39m,
+  salary_range = [31mcol_character()[39m,
+  registration_date = [34mcol_date(format = \"\")[39m,
+  account_type = [31mcol_character()[39m,
+  financial_institution = [31mcol_character()[39m,
+  account_created_date = [34mcol_date(format = \"\")[39m,
+  total_transactions = [32mcol_double()[39m,
+  total_logins = [32mcol_double()[39m,
+  first_login_date = [34mcol_date(format = \"\")[39m,
+  last_login_date = [34mcol_date(format = \"\")[39m,
+  diff_login_date = [32mcol_double()[39m,
+  no_of_accounts = [32mcol_double()[39m
+)
+"
+"0","```r
+user_accounts_data <- read_csv(\"~/Data-project-5/CodeClanMoneyDashboardDataResearchProject/4_clean_data/cleaned_user_account_data.csv\")
+```"
+"1","Parsed with column specification:
+cols(
+  user_identifier = [32mcol_double()[39m,
+  gender = [31mcol_character()[39m,
+  age_range = [31mcol_character()[39m,
+  salary_range = [31mcol_character()[39m,
+  registration_date = [34mcol_date(format = \"\")[39m,
+  account_type = [31mcol_character()[39m,
+  financial_institution = [31mcol_character()[39m,
+  account_created_date = [34mcol_date(format = \"\")[39m,
+  total_transactions = [32mcol_double()[39m
+)
+"

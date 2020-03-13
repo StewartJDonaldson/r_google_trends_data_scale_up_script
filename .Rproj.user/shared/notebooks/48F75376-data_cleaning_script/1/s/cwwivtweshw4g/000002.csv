@@ -1,0 +1,4 @@
+"0","```r
+# Inspecting data before joining the sets together
+head(users)
+```"

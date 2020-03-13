@@ -1,0 +1,6 @@
+"0","```r
+# segmenting users who have never added any accounts to the app
+
+users_with_no_accounts <- user_accounts_full_join %>%
+  filter(is.na(account_identifier)) 
+```"

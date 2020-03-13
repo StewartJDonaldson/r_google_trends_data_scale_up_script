@@ -1,0 +1,28 @@
+"0","```r
+summary(user_accounts_full_join)
+```"
+"1"," user_identifier     gender           age_range         salary_range       registration_date 
+ Min.   :     1   Length:1531707     Length:1531707     Length:1531707     Length:1531707    
+ 1st Qu.:119407   Class :character   Class :character   Class :character   Class :character  
+ Median :323886   Mode  :character   Mode  :character   Mode  :character   Mode  :character  
+ Mean   :288565                                                                              
+ 3rd Qu.:439256                                                                              
+ Max.   :560571                                                                              
+                                                                                             
+ account_identifier account_created_date account_type       financial_institution
+ Min.   :      1    Length:1531707       Length:1531707     Length:1531707       
+ 1st Qu.: 351172    Class :character     Class :character   Class :character     
+ Median : 741565    Mode  :character     Mode  :character   Mode  :character     
+ Mean   : 740229                                                                 
+ 3rd Qu.:1114922                                                                 
+ Max.   :1545312                                                                 
+ NA's   :306500                                                                  
+ total_number_of_transactions
+ Min.   :    1.0             
+ 1st Qu.:   16.0             
+ Median :   80.0             
+ Mean   :  465.6             
+ 3rd Qu.:  454.0             
+ Max.   :28254.0             
+ NA's   :306500              
+"

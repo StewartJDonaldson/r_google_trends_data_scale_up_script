@@ -1,0 +1,36 @@
+"0","```r
+# Creating empty list
+gtrends_data <- list()
+
+# Reading in list of keywords I want Google Trend data for
+kw_payload <- read_csv(here::here(\"/1_raw_data/gtrends_test_kw_payload.csv\"))
+```"
+"1","Parsed with column specification:
+cols(
+  `Keyword List` = [31mcol_character()[39m,
+  `Avg.Monthly Search Vol` = [32mcol_double()[39m,
+  `<--- Don't remove this header` = [33mcol_logical()[39m
+)
+"
+"0","```r
+# Looping through each keyphrase in the keyphrase list and calling Google Trends API for search trend data
+for (i in 1:nrow(kw_payload)){
+  
+ gtrends_data[[i]] <- gtrends(keyword = kw_payload[[i,1]]
+  , geo = \"GB\", time = \"today+5-y\")
+ cat('\n',\"processing\",i, kw_payload[[i,1]])
+ 
+}
+```"
+"1","
+ processing 1 denim jacket
+ processing 2 denim dress
+ processing 3 denim skirt
+ processing 4 jeans
+ processing 5 mens jeans
+ processing 6 ripped jeans
+ processing 7 denim jacket men
+ processing 8 high waisted jeans
+ processing 9 black denim jacket
+ processing 10 black denim skirt
+"

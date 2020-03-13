@@ -1,0 +1,7 @@
+"0","```r
+full_md_data %>%
+  mutate(total_count = n_distinct(user_identifier)) %>%
+  group_by(engagement_level, total_count) %>%
+  summarise(group_count = n_distinct(user_identifier)) %>%
+  mutate(percentage = (group_count/total_count) *100)
+```"

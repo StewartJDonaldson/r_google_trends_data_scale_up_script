@@ -1,0 +1,11 @@
+"0","```r
+# Loading in libraries
+library(gtrendsR)
+library(tidyverse)
+library(readr)
+library(here)
+library(lubridate)
+library(data.table)
+library(fable)
+library(tsibble)
+```"

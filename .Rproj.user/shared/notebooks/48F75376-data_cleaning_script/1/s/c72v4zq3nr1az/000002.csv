@@ -1,0 +1,41 @@
+"0","```r
+
+# reading in all three data sets and cleaning column names
+users <- read_delim(\"~/Data-project-5/CodeClanMoneyDashboardDataResearchProject/2_raw_data/MDBUsers_20200106.csv\", delim = \"|\") %>%
+  clean_names()
+```"
+"1","Parsed with column specification:
+cols(
+  `User Identifier` = [32mcol_double()[39m,
+  Gender = [31mcol_character()[39m,
+  `Age Range` = [31mcol_character()[39m,
+  `Salary Range` = [31mcol_character()[39m,
+  `Registration Date` = [31mcol_character()[39m
+)
+"
+"0","```r
+user_accounts <- read_delim(\"~/Data-project-5/CodeClanMoneyDashboardDataResearchProject/2_raw_data/MDBUserAccounts_20200106.csv\", delim = \"|\") %>%
+  clean_names()
+```"
+"1","Parsed with column specification:
+cols(
+  `User Identifier` = [32mcol_double()[39m,
+  `Account Identifier` = [32mcol_double()[39m,
+  `Account Created Date` = [31mcol_character()[39m,
+  `Account Type` = [31mcol_character()[39m,
+  `Financial Institution` = [31mcol_character()[39m,
+  `Total Number Of Transactions` = [32mcol_double()[39m
+)
+"
+"0","```r
+ 
+user_logins <- read_delim(\"~/Data-project-5/CodeClanMoneyDashboardDataResearchProject/2_raw_data/MDBUserLogins_20200106.csv\", delim = \"|\") %>%
+  clean_names()
+```"
+"1","Parsed with column specification:
+cols(
+  `Record ID` = [32mcol_double()[39m,
+  `User Identifier` = [32mcol_double()[39m,
+  `Login Date` = [31mcol_character()[39m
+)
+"
