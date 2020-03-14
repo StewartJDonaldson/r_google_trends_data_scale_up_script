@@ -1,4 +1,4 @@
-#r google trends data scale up script
+# r google trends data scale up script
 
 Using the [gtrendsr](https://www.rdocumentation.org/packages/gtrendsR/versions/1.4.4) R library, the script loops through a list of keyphrases and calls the Google Trends API to extract the search trend data for each keyphrase. Once all the data is collected, the script then cleans and exports it to CSV ready for visualisation and analysis
 
