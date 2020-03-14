@@ -37,7 +37,7 @@ By default the script is set to retrieve data from the UK for the past five year
 
 `gtrends(keyword = kw_payload[[i, 1]], geo = "GB", time = "today+5-y", hl = "en-GB")`
 
-Full list of arguments can be found [here].(https://www.rdocumentation.org/packages/gtrendsR/versions/1.4.4)
+Full list of arguments can be found [here](https://www.rdocumentation.org/packages/gtrendsR/versions/1.4.4).
 
 4. Run Script
 5. The script extracts the **"interest over time"** and **"related query data"**,  cleans it and then exports it to three CSVs that are saved in the `cleaned_data` folder
