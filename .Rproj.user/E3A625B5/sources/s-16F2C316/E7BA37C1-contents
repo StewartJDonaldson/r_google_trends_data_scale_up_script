@@ -29,7 +29,7 @@ kw_payload <- read_csv(here::here("1_raw_data/kwr_payload.csv"))
 start_time <- Sys.time()
 
 for (i in 1:nrow(kw_payload)) {
-  gtrends_data[[i]] <- gtrends(keyword = kw_payload[[i, 1]], geo = "GB", time = "today+5-y")
+  gtrends_data[[i]] <- gtrends(keyword = kw_payload[[i, 1]], geo = "GB", time = "today+5-y", hl = "en-GB")
 
   cat("\n", "processing", i, kw_payload[[i, 1]])
 }

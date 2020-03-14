@@ -5,16 +5,16 @@
     "dirty" : true,
     "encoding" : "UTF-8",
     "folds" : "",
-    "hash" : "4254860040",
+    "hash" : "0",
     "id" : "E7BA37C1",
-    "lastKnownWriteTime" : 1584126047,
-    "last_content_update" : 1584126047583,
+    "lastKnownWriteTime" : 1584182633,
+    "last_content_update" : 1584208204196,
     "path" : "~/7_personal_projects/r_google_trends_data_scale_up_script/2_scripts/r_google_trends_data_scale_up_script.Rmd",
     "project_path" : "2_scripts/r_google_trends_data_scale_up_script.Rmd",
     "properties" : {
         "chunk_output_type" : "inline",
-        "cursorPosition" : "15,0",
-        "scrollLine" : "4"
+        "cursorPosition" : "31,106",
+        "scrollLine" : "23"
     },
     "read_only" : false,
     "read_only_alternatives" : [
