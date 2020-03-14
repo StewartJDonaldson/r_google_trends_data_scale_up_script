@@ -11,7 +11,7 @@ This script was created to be able to automatically extract Google Trends data a
 4. Data normalisation in Google Trends
 
 
-#Installation
+# Installation
 - Install `R` and `Rstudio`
 
 - Install the following r packages using `install.packages()` in the Rstudio console. For example, `install.packages("gtrendsr")`:
